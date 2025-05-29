@@ -16,6 +16,14 @@
      padding: 40px 20px;
      text-align: center;
    }
+   header img {
+     width: 150px;
+     height: 150px;
+     object-fit: cover;
+     border-radius: 50%;
+     border: 5px solid white;
+     margin-bottom: 10px;
+   }
    h1, h2 {
      color: #800080;
    }
@@ -37,25 +45,28 @@
      padding: 20px;
      font-size: 14px;
    }
-   .btn-custom {
-     background-color: #d291bc;
-     color: white;
+   .icon {
+     width: 30px;
+     margin-right: 10px;
    }
-   .badge-custom {
-     background-color: #e6a8d7;
-     color: white;
+   .project-img {
+     width: 100%;
+     border-radius: 10px;
+     margin-bottom: 15px;
    }
 </style>
 </head>
 <body>
 <header>
+<img src="https://randomuser.me/api/portraits/women/79.jpg" alt="Pranavi Srungavarapu">
 <h1>Pranavi Srungavarapu</h1>
-<p>Data Quality Engineer | ML & NLP Enthusiast</p>
+<p>Data Quality Engineer | ML & NLP Enthusiast | Tech Explorer</p>
 </header>
-<nav class="navbar navbar-expand-lg navbar-light bg-light px-3">
+<nav class="navbar navbar-expand-lg navbar-light bg-light px-3 sticky-top shadow-sm">
 <div class="container-fluid">
 <a class="navbar-brand text-purple" href="#">Portfolio</a>
-<div class="collapse navbar-collapse">
+<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+<div class="collapse navbar-collapse" id="navbarNav">
 <ul class="navbar-nav ms-auto">
 <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
 <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
@@ -66,51 +77,62 @@
 </div>
 </div>
 </nav>
+<!-- Experience Section -->
 <section id="experience">
-<h2>Experience</h2>
+<h2><img class="icon" src="https://cdn-icons-png.flaticon.com/512/3135/3135687.png" alt="">Experience</h2>
 <div class="section-bg">
 <strong>Southwest Airlines – Data Quality Engineer</strong><br>
-   Nov 2024 – Present, Dallas, TX (Contract)<br>
-<em>Ensured accuracy and integrity of airline data pipelines.</em><br><br>
-<strong>Paramount Global Solutions – Test Automation Engineer & Data Quality Engineer</strong><br>
-   Aug 2024 – Nov 2024, Dallas, TX<br>
-<em>Built automated test suites for customer sentiment analysis.</em><br><br>
+<em>Nov 2024 – Present | Dallas, TX (Contract)</em><br>
+   Ensuring data quality and integrity across high-volume airline data systems. Built Python scripts and SQL validations to catch anomalies in ETL pipelines.<br><br>
+<strong>Paramount Global Solutions – QA & Data Engineer</strong><br>
+<em>Aug 2024 – Nov 2024 | Dallas, TX</em><br>
+   Created testing frameworks for sentiment analysis using Kafka streams and automated pipelines. Built custom dashboards to monitor data flow and validate output.<br><br>
 <strong>Tata Consultancy Services – Assistant System Engineer</strong><br>
-   Jul 2021 – Jul 2022, Hyderabad, India<br>
-<em>Developed inventory demand forecasting systems.</em><br><br>
+<em>Jul 2021 – Jul 2022 | Hyderabad, India</em><br>
+   Developed demand forecasting systems for retail inventory using regression and time series. Optimized SQL queries and created business reports.<br><br>
 <strong>Exposys Data Labs – Data Engineer Intern</strong><br>
-   Aug 2020 – Dec 2020, Bengaluru (Remote)<br>
-<em>Created sales data pipelines and analytics models.</em>
+<em>Aug 2020 – Dec 2020 | Remote</em><br>
+   Designed ETL pipelines and dashboards for sales performance using Pandas, Matplotlib, and Power BI.
 </div>
 </section>
+<!-- Projects Section -->
 <section id="projects">
-<h2>Projects</h2>
+<h2><img class="icon" src="https://cdn-icons-png.flaticon.com/512/1159/1159633.png" alt="">Projects</h2>
 <div class="section-bg">
-<ul>
-<li><strong>Sentiment Analysis – IMDb NLP (UTA)</strong> | LSTM, Word2Vec, TensorFlow</li>
-<li><strong>URM Application (UTA)</strong> | Inclusive hiring platform with full-stack features</li>
-<li><strong>Customer Segmentation using K-Means</strong> | Clustered users based on income & spending</li>
-<li><strong>Stratification of Musical Styles</strong> | KNN audio classifier</li>
-<li><strong>Virtual Sketch with OpenCV</strong> | Hand-based air canvas with Python</li>
-<li><strong>Web App for Ayurvedic Help</strong> | Hospital finder and remedy booker</li>
-<li><strong>Keep a Check on Trash</strong> | IoT-based smart bin</li>
-</ul>
+<p><strong>1. Sentiment Analysis using IMDb Reviews (UTA)</strong><br>
+   Used NLP techniques including Word2Vec and LSTM to classify IMDb reviews into positive and negative sentiments. Achieved 88% accuracy using TensorFlow, with real-time prediction support via Streamlit.</p>
+<p><strong>2. URM Inclusive Hiring App (UTA)</strong><br>
+   Full-stack web application promoting diversity hiring. Implemented Flask for backend, MySQL for DB, and Bootstrap for responsive frontend. Included login, recruiter dashboard, and resume scoring system.</p>
+<p><strong>3. Customer Segmentation using K-Means</strong><br>
+   Clustered retail customers using scikit-learn’s K-Means algorithm based on income, spending score, and age. Visualized results using Seaborn plots for marketing insights.</p>
+<p><strong>4. Stratification of Musical Styles using KNN</strong><br>
+   Developed a music genre classifier using K-Nearest Neighbors on audio features like tempo, pitch, and MFCC. Achieved 92% accuracy with dynamic tuning of k-value and distance metrics.</p>
+<p><strong>5. Virtual Sketch using OpenCV</strong><br>
+   Created an air sketch tool where hand gestures control brush strokes using OpenCV and color detection. Integrated real-time camera feed with gesture tracking and shape drawing.</p>
+<p><strong>6. Ayurvedic Web App for Herbal Remedies</strong><br>
+   Designed a web application to locate Ayurvedic hospitals and book treatments using secure login, Google Maps APIs, and QR code-based confirmations.</p>
+<p><strong>7. Keep a Check on Trash – IoT Smart Bin</strong><br>
+   Built a prototype smart dustbin using Arduino and IR sensors that alerts cleaning crew when full. Integrated with a web dashboard to monitor real-time bin status.</p>
 </div>
 </section>
+<!-- Education Section -->
 <section id="education">
-<h2>Education</h2>
+<h2><img class="icon" src="https://cdn-icons-png.flaticon.com/512/3135/3135755.png" alt="">Education</h2>
 <div class="section-bg">
-<strong>University of Texas at Arlington</strong> – MS in Computer Science (2022 – 2024)<br>
-<strong>Velagapudi Ramakrishna Siddhartha Engineering College</strong> – B.Tech in CSE (2017 – 2021)
+<strong>University of Texas at Arlington</strong><br>
+   Master of Science – Computer Science (2022 – 2024)<br><br>
+<strong>Velagapudi Ramakrishna Siddhartha Engineering College</strong><br>
+   B.Tech – Computer Science & Engineering (2017 – 2021)
 </div>
 </section>
+<!-- Certifications Section -->
 <section id="certifications">
-<h2>Licenses & Certifications</h2>
+<h2><img class="icon" src="https://cdn-icons-png.flaticon.com/512/190/190411.png" alt="">Certifications</h2>
 <div class="section-bg row">
 <div class="col-md-6">
 <ul>
 <li>Harvard: Data Science – Machine Learning</li>
-<li>IBM: Python & SQL</li>
+<li>IBM: Python for Data Science & SQL</li>
 <li>Big Data with IBM Infosphere</li>
 <li>AI for Everyone – Coursera</li>
 <li>Cloud Computing – Udemy</li>
@@ -122,8 +144,8 @@
 <div class="col-md-6">
 <ul>
 <li>RPA – GUVI</li>
-<li>CCNA v2.7 + CCNA Routing & Switching – Cisco</li>
-<li>Cybersecurity Essentials</li>
+<li>CCNA v2.7 + Routing & Switching – Cisco</li>
+<li>Cybersecurity Essentials – Cisco</li>
 <li>PCAP Python – Cisco</li>
 <li>NDG Linux – Cisco</li>
 <li>Intro to R – NPTEL</li>
@@ -133,19 +155,21 @@
 </div>
 </div>
 </section>
+<!-- Publications Section -->
 <section id="publications">
-<h2>Publications</h2>
+<h2><img class="icon" src="https://cdn-icons-png.flaticon.com/512/2790/2790565.png" alt="">Publications</h2>
 <div class="section-bg">
 <ul>
-<li><strong>Virtual Sketch Using OpenCV</strong><br>
-       International Journal of Innovative Technology and Exploring Engineering (IJITEE), June 2021</li>
-<li><strong>Web-based Application for Ayurvedic Medication Seekers</strong><br>
-       IJRAR, Sep 2020</li>
+<li><strong>Virtual Sketch Using OpenCV</strong> – IJITEE, June 2021<br>
+     Published a computer vision paper on air sketching using OpenCV and gesture detection.</li><br>
+<li><strong>Ayurvedic Medication App</strong> – IJRAR, Sep 2020<br>
+     Proposed a smart system for finding and booking traditional herbal hospitals with built-in location and payment support.</li>
 </ul>
 </div>
 </section>
 <footer>
- © 2025 Pranavi Srungavarapu · <a href="mailto:pranavi.0913@gmail.com">Email Me</a>
+ © 2025 Pranavi Srungavarapu · <a href="mailto:srungavarapupranavi@gmail.com">Email Me</a>
 </footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
